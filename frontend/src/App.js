@@ -75,7 +75,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>🚌 Public Transport Tracker</h1>
+      <h1>🚌 Real-Time Public Transport Tracking for Small Cities</h1>
       <h2>Track buses in real time</h2>
 
       <input
