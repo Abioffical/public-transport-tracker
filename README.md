@@ -1,95 +1,125 @@
-# 🚌 Public Transport Tracker
+# 🚌 Real-Time Public Transport Tracking for Small Cities
 
-## 📌 Project Description
+## 📖 Project Description
 
-Public Transport Tracker is a full-stack web application that helps users track bus information such as route, current location, and operational status.
+Real-Time Public Transport Tracking for Small Cities is a web application developed to help passengers track public buses in real time. The system allows administrators to manage bus information while passengers can view bus details, search for buses, and monitor their current status.
 
-The application allows users to add, update, search, and delete bus records through an interactive web interface.
-
----
-
-## 🚀 Features
-
-* Add new buses
-* View all buses
-* Update bus location
-* Delete buses
-* Search buses by bus number
-* Track bus status (Running / Delayed)
-* Responsive and user-friendly interface
+This project is developed using React.js for the frontend, Spring Boot for the backend, and MySQL as the database.
 
 ---
 
-## 🛠 Technologies Used
+## ✨ Features
+
+### Admin
+- Secure Login
+- Add Bus
+- Update Bus Location
+- Delete Bus
+- View Dashboard
+
+### Passenger
+- Secure Login
+- View Bus Details
+- Search Bus
+- Live Tracking Status
+- View Dashboard
+
+---
+
+## 🛠 Technology Stack
 
 ### Frontend
-
-* React.js
-* Axios
-* CSS
+- React.js
+- HTML
+- CSS
+- JavaScript
+- Axios
 
 ### Backend
-
-* Spring Boot
-* Java
+- Spring Boot
+- Java
 
 ### Database
-
-* MySQL
-
-### Tools
-
-* Git
-* GitHub
-* VS Code
+- MySQL
 
 ---
 
-## 📂 Project Structure
+## 📊 Modules
 
-public-transport-tracker/
-├── frontend/
-└── backend/
+- Admin Module
+- Passenger Module
+- Bus Management
+- Dashboard
+- Search Module
 
 ---
 
-## ⚙️ How to Run
+## 🚀 How to Run
 
 ### Backend
 
-1. Open the backend folder.
-2. Run:
-
+```bash
 mvn spring-boot:run
-
-3. Backend runs on:
-
-http://localhost:8080
+```
 
 ### Frontend
 
-1. Open the frontend folder.
-2. Run:
-
+```bash
+cd frontend
 npm install
 npm start
-
-3. Frontend runs on:
-
-http://localhost:3000
+```
 
 ---
 
-## 📸 Features Implemented
+## 🔑 Demo Login
 
-* CRUD Operations
-* REST API Integration
-* Database Connectivity
-* Search Functionality
-* Status Tracking
+### Admin
+
+Username:
+```
+admin
+```
+
+Password:
+```
+admin123
+```
+
+### Passenger
+
+Username:
+```
+user
+```
+
+Password:
+```
+user123
+```
 
 ---
 
-## 👩‍💻 Author
+## 📸 Project
 
-Abiramy S
+- Dashboard
+- Bus Management
+- Search Bus
+- Live Tracking
+- Admin & Passenger Login
+
+---
+
+## 👩‍💻 Developed By
+
+**ABIRAMY S**
+
+Department of Computer Science and Engineering
+
+VSB College of Engineering Technical Campus
+
+---
+
+## 📄 License
+
+This project is developed for educational purposes.
