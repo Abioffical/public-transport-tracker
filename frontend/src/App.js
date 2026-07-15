@@ -17,7 +17,7 @@ function App() {
 
   const loadBuses = () => {
     axios
-      .get("http://localhost:8080/api/buses")
+      .get("https://public-transport-tracker-production.up.railway.app/api/buses")
       .then((response) => {
         setBuses(response.data);
         setLastUpdated(new Date().toLocaleTimeString());
@@ -28,29 +28,30 @@ function App() {
   };
 
   const addBus = () => {
-    axios
-      .post("http://localhost:8080/api/buses", {
-        busNumber: busNumber,
-        route: route,
-        currentLocation: location,
-        status: "Running"
-      })
-      .then(() => {
-        alert("Bus Added!");
-        loadBuses();
+  axios
+    .post("https://public-transport-tracker-production.up.railway.app/api/buses", {
+      busNumber: busNumber,
+      route: route,
+      currentLocation: location,
+      status: "Running"
+    })
+    .then(() => {
+      alert("Bus Added!");
+      loadBuses();
 
-        setBusNumber("");
-        setRoute("");
-        setLocation("");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      setBusNumber("");
+      setRoute("");
+      setLocation("");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
   };
 
   const deleteBus = (id) => {
     axios
-      .delete(`http://localhost:8080/api/buses/${id}`)
+      .delete(`https://public-transport-tracker-production.up.railway.app/api/buses/${id}`)
       .then(() => {
         alert("Bus Deleted!");
         loadBuses();
@@ -64,7 +65,7 @@ function App() {
     const bus = buses.find((b) => b.id === id);
 
     axios
-      .put(`http://localhost:8080/api/buses/${id}`, {
+       .put(`https://public-transport-tracker-production.up.railway.app/api/buses/${id}`, {
         busNumber: bus.busNumber,
         route: bus.route,
         currentLocation: editLocation,
