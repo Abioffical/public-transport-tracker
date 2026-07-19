@@ -13,6 +13,9 @@ public class Bus {
     private String route;
     private String currentLocation;
     private String status;
+    
+    public Bus() {
+    }
 
     public Long getId() {
         return id;
@@ -53,5 +56,5 @@ public class Bus {
     public void setStatus(String status) {
         this.status = status;
     }
+    
 }
-

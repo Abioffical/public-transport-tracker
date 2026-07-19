@@ -4,7 +4,6 @@ import com.example.demo.model.Bus;
 import com.example.demo.repository.BusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
@@ -21,11 +20,17 @@ public class BusController {
         return busRepository.findAll();
     }
 
-    @PostMapping
-    public Bus addBus(@RequestBody Bus bus) {
-        return busRepository.save(bus);
-    }
+   @PostMapping
+public Bus addBus(@RequestBody Bus bus) {
 
+    System.out.println("ADDING BUS...");
+    System.out.println(bus.getBusNumber());
+    System.out.println(bus.getRoute());
+    System.out.println(bus.getCurrentLocation());
+    System.out.println(bus.getStatus());
+
+    return busRepository.save(bus);
+}
     @GetMapping("/{id}")
     public Bus getBusById(@PathVariable Long id) {
         return busRepository.findById(id).orElse(null);
@@ -41,6 +46,7 @@ public class BusController {
             bus.setRoute(updatedBus.getRoute());
             bus.setCurrentLocation(updatedBus.getCurrentLocation());
             bus.setStatus(updatedBus.getStatus());
+
             return busRepository.save(bus);
         }
 
